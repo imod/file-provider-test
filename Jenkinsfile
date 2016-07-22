@@ -1,6 +1,4 @@
 node {
-    stage 'Checkout'
-    checkout scm
     stage 'Build Maven'
     wrap([$class: 'ConfigFileBuildWrapper', managedFiles: [[fileId: 'MVN_SETTINGS_1', targetLocation: '', variable: 'GLOBAL_SETTINGS']]]) {
         sh "echo {env.GLOBAL_SETTINGS}"
