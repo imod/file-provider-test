@@ -1,5 +1,5 @@
 node {
-    stage 'Build Maven'
+    //stage 'Build Maven'
     git url: "git@github.com:imod/file-provider-test.git"
     wrap([$class: 'ConfigFileBuildWrapper', managedFiles: [[fileId: 'MVN_SETTINGS_1', targetLocation: '', variable: 'GLOBAL_SETTINGS']]]) {
         sh "echo {env.GLOBAL_SETTINGS}"
